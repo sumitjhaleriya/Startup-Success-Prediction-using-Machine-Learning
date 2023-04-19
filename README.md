@@ -1,6 +1,6 @@
 # Startup-Success-Prediction-using-Machine-Learning
 
-This project uses machine learning to predict the success of startup companies based on various features such as funding, location, industry, and team size. The goal is to help investors and entrepreneurs make more informed decisions about which startups to invest in or launch.
+This project uses machine learning to predict the success of startup companies based on various features such as funding, location, industry, and team size. The goal is to help investors and entrepreneurs make more informed decisions about which startups to invest in or launch or the startup will be successfull or not.
 
 ## DataSet
 The dataset used in this project is sourced from crunchbase.com . It contains information about several thousand startup companies, including their funding history, location, industry, team size, and other relevant features. The dataset requires cleaning and preprocessing to remove missing values and outliers, and to convert categorical variables into numeric ones.
