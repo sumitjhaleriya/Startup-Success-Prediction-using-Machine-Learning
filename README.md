@@ -6,7 +6,7 @@ This project uses machine learning to predict the success of startup companies b
 The dataset used in this project is sourced from crunchbase.com . It contains information about several thousand startup companies, including their funding history, location, industry, team size, and other relevant features. The dataset requires cleaning and preprocessing to remove missing values and outliers, and to convert categorical variables into numeric ones.
 
 ## Machine Learning Models
-To predict the success of startups, we tested several machine learning models, including Decision Tree Classifier (DTC), Support Vector Machine Classifier (SVMC), Extra Trees Classifier (ExtC), Random Forest Classifier (RFC), and Gradient Boosting Classifier (GBC). For each model, we performed a grid search to find the optimal hyperparameters that maximize the accuracy of the model.
+To predict the success of startups, we tested several machine learning models, including XGBoost Classifier(XBC), AdaBoost Classifier(ABC) , Random Forest Classifier (RFC), and Gradient Boosting Classifier (GBC). For each model, we performed a grid search to find the optimal hyperparameters that maximize the accuracy of the model.
 
 ## Results
 After testing all the models, we found that Random Forest Classifier (RFC) gave the best accuracy score of 0.85. We also created a scatterplot of the feature importances of each model, which shows that funding and industry are the most important predictors of startup success.
@@ -41,7 +41,7 @@ Code functions such as 'ignore_warn', 'draw_heatmap', 'getOutliersMatrix', and '
 
 Finally, the cleaned and processed dataset is stored in the 'dataset' dataframe.
 
-Use meta-modeling approach  to combine the predictions of multiple base models to improve the accuracy of the final prediction. The base models used are a XGBoost Classifier, AdaBoost Classifier, a Random Forest Classifier (RFC), and a Gradient Boosting Classifier (GBC).
+Use meta-modeling approach  to combine the predictions of multiple base models to improve the accuracy of the final prediction. The base models used are a XGBoost Classifier(XBC), AdaBoost Classifier(ABC), a Random Forest Classifier (RFC), and a Gradient Boosting Classifier (GBC).
 
 For each of the base models, a grid search is performed to find the optimal hyperparameters that give the best accuracy score. The hyperparameters that are tuned vary depending on the model, but some common ones include the maximum depth of the tree, the number of estimators, and the learning rate.
 
