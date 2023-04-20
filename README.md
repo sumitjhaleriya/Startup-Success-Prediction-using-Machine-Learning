@@ -17,11 +17,11 @@ After testing all the models, we found that Random Forest Classifier (RFC) gave 
 To run the code, you'll need to do following steps :
 
 - Import necessary libraries :
-pandas
-numpy
-seaborn
-scikit-learn
-plotly
+  pandas
+  numpy
+  seaborn
+  scikit-learn
+  plotly
 
 - Read a CSV file "startup data.csv" and storing the data in the 'dataset' dataframe.
 
