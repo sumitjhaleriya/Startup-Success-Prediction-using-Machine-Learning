@@ -16,36 +16,36 @@ After testing all the models, we found that Random Forest Classifier (RFC) gave 
 ```bash
 To run the code, you'll need to do following steps :
 
-Import necessary libraries :
+- Import necessary libraries :
 pandas
 numpy
 seaborn
 scikit-learn
 plotly
 
-Read a CSV file "startup data.csv" and storing the data in the 'dataset' dataframe.
+- Read a CSV file "startup data.csv" and storing the data in the 'dataset' dataframe.
 
-Rename the 'status' column to 'is_acquired' and changing its values from 'acquired' to '1' and from 'operating' to '0'.
+- Rename the 'status' column to 'is_acquired' and changing its values from 'acquired' to '1' and from 'operating' to '0'.
 
-Create a heatmap to check the correlation between different features of the dataset.
+- Create a heatmap to check the correlation between different features of the dataset.
 
-Remove outliers from the dataset by computing the interquartile range (IQR) and checking if any value falls outside the range of [Q1 - 1.5IQR, Q3 + 1.5IQR]. The values outside this range are considered as outliers.
+- Remove outliers from the dataset by computing the interquartile range (IQR) and checking if any value falls outside the range of [Q1 - 1.5IQR, Q3 + 1.5IQR]. The values outside this range are considered as outliers.
 
-Input missing values in numerical features of the dataset using KNNImputer from the scikit-learn library.
+- Input missing values in numerical features of the dataset using KNNImputer from the scikit-learn library.
 
-Convert some features from object type to numeric type and deleting unnecessary features.
+- Convert some features from object type to numeric type and deleting unnecessary features.
 
-Create a correlation matrix and dropping features that have a correlation coefficient less than 0.2 with the target variable 'is_acquired'.
+- Create a correlation matrix and dropping features that have a correlation coefficient less than 0.2 with the target variable 'is_acquired'.
 
-Code functions such as 'ignore_warn', 'draw_heatmap', 'getOutliersMatrix', and 'imputing_numeric_missing_values' that are used in the main code to perform the mentioned operations.
+- Code functions such as 'ignore_warn', 'draw_heatmap', 'getOutliersMatrix', and 'imputing_numeric_missing_values' that are used in the main code to perform the mentioned operations.
 
-Finally, the cleaned and processed dataset is stored in the 'dataset' dataframe.
+- Finally, the cleaned and processed dataset is stored in the 'dataset' dataframe.
 
-Use meta-modeling approach  to combine the predictions of multiple base models to improve the accuracy of the final prediction. The base models used are a XGBoost Classifier(XBC), AdaBoost Classifier(ABC), a Random Forest Classifier (RFC), and a Gradient Boosting Classifier (GBC).
+- Use meta-modeling approach  to combine the predictions of multiple base models to improve the accuracy of the final prediction. The base models used are a XGBoost Classifier(XBC), AdaBoost Classifier(ABC), a Random Forest Classifier (RFC), and a Gradient Boosting Classifier (GBC).
 
-For each of the base models, a grid search is performed to find the optimal hyperparameters that give the best accuracy score. The hyperparameters that are tuned vary depending on the model, but some common ones include the maximum depth of the tree, the number of estimators, and the learning rate.
+- For each of the base models, a grid search is performed to find the optimal hyperparameters that give the best accuracy score. The hyperparameters that are tuned vary depending on the model, but some common ones include the maximum depth of the tree, the number of estimators, and the learning rate.
 
-Print The results of each grid search are , and the best estimator is added to a list of the best classifiers. Finally, Define a function to create a scatterplot of the feature importances of each base model using Plotly.
+- Print The results of each grid search are , and the best estimator is added to a list of the best classifiers. Finally, Define a function to create a scatterplot of the feature importances of each base model using Plotly.
 
 
 ```
